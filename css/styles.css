@@ -6,6 +6,13 @@
 }
 body{
     color: #ededed ;
+    background-color: #070761;
+}
+.seprate{
+    width: 60%;
+    margin: auto;
+    height: 2px;
+    background-color: rgb(247, 247, 247);
 }
 .header{
     position: fixed;
@@ -13,7 +20,7 @@ body{
     left: 0;
     width: 100%;
     padding: 20px 10px;
-    background: transparent;
+    background: #051129;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +48,7 @@ body{
     opacity: 0;
     animation: slideTop 0.5s ease forwards;
     animation-delay: calc(.2s * var(--i));
-    color: black;
+    color: rgb(173, 164, 164);
 }
 .navbar a:hover{
     color: #0ef;
@@ -51,7 +58,8 @@ body{
     width: 100%;
     justify-content: space-between ;
     height: 100vh;
-    background: rgb(0, 4, 255);
+    background: url("/images/udit.png") no-repeat center;
+    background-size: cover;
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
@@ -129,6 +137,167 @@ body{
 .btn-box:hover{
     box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan,0 0 100px cyan,0 0 200px cyan;
 }
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.about-img{
+    padding-top: 75px;
+}
+.about-img img{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius:155px 513px 285px;
+    mix-blend-mode: normal;
+}
+.about-text h2{
+    font-size: 60px;
+}
+.about-text h2 span{
+    color: #0ef;
+}
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sercices{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.container{
+    padding: 90px;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span{
+    color: #0ef;
+}
+.sercices-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.sercices-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 12px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+    transition: background 0.5s transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7 ;
+    cursor: pointer;
+}
+.sercices-list div:hover{
+    transform: translateY(-10px);
+}
+.sercices-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.sercices-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.sercices-list div a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read{
+    display: inline-block;
+    padding: 12px 28px ;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,  0 0 25px #0ef;
+}
+.read:hover{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan,0 0 100px cyan,0 0 200px cyan;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px  90px ;
+    margin-left: 120px;
+}
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}
+.teahnical-bars .bar{
+    margin-top: 40px 0;
+}
+.teahnical-bars .bar:first-child{
+    margin-top: 0;
+}
+.teahnical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.teahnical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.teahnical-bars .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards ;
+    /* opacity: 0; */
+}
+.teahnical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 15px;
+    background: black;
+    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+/* @keyframes animate{
+
+} */
+
 @keyframes slideRight {
     0%{
         transform: translateX(-100px);
@@ -174,6 +343,7 @@ body{
         transform: translateX(100px);
         opacity: 0;
     }
+
     100%{
         transform: translateX(0px);
         opacity: 1;
