@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "poopins", sans-serif;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
     width: 10px;
